@@ -1,0 +1,111 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem var(--section-pad-x);
+  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+}
+
+.navbar--scrolled {
+  background: rgba(7, 11, 18, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.navbar__brand-mark {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), #0ea5e9);
+  color: #041018;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navbar__links a {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.navbar__links a:hover {
+  color: var(--text);
+}
+
+.navbar__cta {
+  padding: 0.5rem 1rem !important;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text) !important;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.navbar__cta:hover {
+  border-color: var(--accent);
+  color: var(--accent) !important;
+}
+
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.2s;
+}
+
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(280px, 80vw);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 1.5rem 2rem;
+    background: var(--bg-elevated);
+    border-left: 1px solid var(--border);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    gap: 1.25rem;
+  }
+
+  .navbar__links--open {
+    transform: translateX(0);
+  }
+}

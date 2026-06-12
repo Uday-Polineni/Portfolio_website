@@ -1,0 +1,36 @@
+.social-sidebar {
+  position: fixed;
+  left: clamp(1rem, 2.5vw, 2rem);
+  bottom: 2.5rem;
+  z-index: 90;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.social-sidebar__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--text-muted);
+  transition: color 0.25s, transform 0.25s;
+}
+
+.social-sidebar__link:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+@media (min-width: 900px) {
+  .social-sidebar {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-sidebar__link:hover {
+    transform: none;
+  }
+}

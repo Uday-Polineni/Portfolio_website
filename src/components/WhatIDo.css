@@ -1,0 +1,161 @@
+/* Sticky stack — same pattern as Portfolio projects section */
+.whatido-stack {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.whatido-sticky-slot {
+  position: sticky;
+  top: 5.5rem;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  height: 100dvh;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.whatido-sticky-inner {
+  width: 100%;
+  transform-origin: top center;
+  will-change: transform;
+  pointer-events: auto;
+}
+
+.whatido-panel {
+  min-height: calc(100dvh - 5.5rem);
+  background: #070b12;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -32px 80px rgba(7, 11, 18, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+
+.whatido-panel__title-row {
+  padding: clamp(1.1rem, 2.2vw, 1.6rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.whatido-panel__title-row h3 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4.2vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.whatido-panel__title-row--active h3 {
+  background: linear-gradient(180deg, #c8d0dc 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.whatido-panel__detail {
+  flex: 1;
+  padding-top: clamp(1rem, 2vw, 1.5rem);
+  padding-left: 50%;
+  padding-bottom: 2rem;
+}
+
+.whatido-panel__detail-inner {
+  display: flex;
+  gap: 1.25rem;
+  min-width: 0;
+  max-width: 38rem;
+}
+
+.whatido-panel__dot {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 0.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  position: relative;
+}
+
+.whatido-panel__dot::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: var(--text);
+}
+
+.whatido-panel__copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.whatido-panel__copy p {
+  margin: 0 0 1.25rem;
+  font-size: clamp(0.92rem, 1.7vw, 1.02rem);
+  line-height: 1.75;
+  color: var(--text-muted);
+  overflow-wrap: break-word;
+}
+
+.whatido-panel__copy li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--border);
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
+  line-height: 1.45;
+  color: var(--text);
+  overflow-wrap: break-word;
+}
+
+.whatido-panel__copy li span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  min-width: 1.4rem;
+}
+
+.whatido-stack__spacer {
+  height: 60vh;
+  height: 60dvh;
+}
+
+@media (max-width: 768px) {
+  .whatido-panel__detail {
+    padding-left: 0;
+  }
+
+  .whatido-panel__detail-inner {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatido-sticky-slot {
+    position: relative;
+    top: auto;
+    height: auto;
+    pointer-events: auto;
+  }
+
+  .whatido-sticky-inner {
+    transform: none !important;
+  }
+
+  .whatido-panel {
+    min-height: auto;
+    box-shadow: none;
+    padding-bottom: 1rem;
+  }
+
+  .whatido-sticky-slot + .whatido-sticky-slot {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .whatido-stack__spacer {
+    display: none;
+  }
+}
