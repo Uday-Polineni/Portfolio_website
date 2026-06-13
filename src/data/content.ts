@@ -6,42 +6,61 @@ export const profile = {
   footerTagline: "Distributed Systems · APIs · Cloud Platforms",
   headline:
     "I build scalable backend services and event-driven systems that stay reliable under load.",
-  email: "udayk.polineni@gmail.com",
+  email: "udaypolinenik@gmail.com",
   phone: "+1 689-280-8131",
   github: "https://github.com/Uday-Polineni/",
   linkedin: "https://www.linkedin.com/in/uday-polineni/",
 };
 
-export const about = `Backend Software Engineer with 3+ years of experience designing scalable distributed systems, RESTful APIs, and event-driven architectures in cloud-native environments. I work across Python, Java, Kafka, PostgreSQL, Redis, and AWS — with a focus on throughput, reliability, and clean service design. Passionate about system design, performance optimization, and AI-integrated backend engineering.`;
+export const about = `Backend Software Engineer with experience building scalable distributed systems, RESTful APIs, and event-driven architectures. I work across Python, FastAPI, Java, .NET, Kafka, PostgreSQL, SQL Server, Redis, and AWS — with a focus on throughput, reliability, and production backend design.`;
 
 export const skillMap: { category: string; skills: string[] }[] = [
   {
-    category: "Programming Languages",
-    skills: ["Python", "Java", "C#", "JavaScript", "Go", "Bash"],
+    category: "languages",
+    skills: ["Python", "C#", "Java", "JavaScript"],
   },
   {
-    category: "Backend Systems",
-    skills: ["FastAPI", "Spring Boot", "REST APIs", "Microservices", "Kafka"],
+    category: "frameworks",
+    skills: [
+      "FastAPI",
+      "Spring Boot",
+      ".NET",
+      "REST APIs",
+      "Apache Kafka",
+      "Microservices",
+      "Alembic",
+      "Flyway",
+    ],
   },
   {
-    category: "Databases",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB"],
+    category: "databases",
+    skills: ["PostgreSQL", "SQL Server", "Redis"],
   },
   {
-    category: "Cloud Platforms",
-    skills: ["AWS", "Azure", "Docker", "Kubernetes"],
+    category: "cloud",
+    skills: [
+      "AWS EC2",
+      "AWS S3",
+      "AWS RDS",
+      "Aurora",
+      "React",
+      "Docker",
+      "Jenkins",
+      "GitHub Actions",
+      "CI/CD",
+      "Git",
+    ],
   },
   {
-    category: "DevOps & CI/CD",
-    skills: ["Terraform", "Jenkins", "CI/CD", "Git", "Azure DevOps"],
-  },
-  {
-    category: "Observability",
-    skills: ["Prometheus", "Grafana", "Linux", "System Design"],
-  },
-  {
-    category: "AI / ML",
-    skills: ["TensorFlow", "Keras", "CNN", "Transformer NLP", "Generative AI"],
+    category: "ai",
+    skills: [
+      "RAG",
+      "LLM APIs",
+      "pytest",
+      "Data Structures & Algorithms",
+      "System Design",
+      "Linux",
+    ],
   },
 ];
 
@@ -52,21 +71,20 @@ export const experience = [
     period: "Feb 2026 — Present",
     yearLabel: "NOW",
     highlights: [
-      "Built backend APIs and internal services with Python, FastAPI, and PostgreSQL for workflow automation.",
-      "Cut API response latency ~25% via query optimization and Redis caching for hot paths.",
-      "Deployed and monitored services on AWS (EC2, S3, RDS) with 99%+ production uptime.",
-      "Partnered with frontend and cross-functional teams on features, incidents, and CI/CD via Git and Azure DevOps.",
+      "Architected Python FastAPI microservices adopted by 10+ engineering teams, exposing 15+ production REST APIs with modular boundaries that enabled independent cross-team releases.",
+      "Engineered Apache Kafka event pipelines processing 10K+ activity events daily across microservices, replacing synchronous inter-service calls for asynchronous workflow automation.",
+      "Operated 4+ production microservices on AWS (EC2, Aurora, RDS, S3) with GitHub Actions CI/CD, sustaining 99%+ uptime and supporting weekly production releases.",
+      "Built React workflow UI modules integrated with FastAPI REST APIs, delivering production dashboards and form flows for operations teams.",
     ],
   },
   {
-    role: "Teaching Assistant (Database Systems)",
+    role: "Teaching Assistant",
     company: "Florida Institute of Technology",
     period: "Aug 2025 — Dec 2025",
     yearLabel: "2025",
     highlights: [
-      "Assisted in teaching Database Systems for graduate and undergraduate students.",
-      "Held office hours and supported students with assignments, projects, and exams.",
-      "Graded coursework and provided feedback to improve student learning outcomes.",
+      "Built Python scripts with LLM-based rubric evaluation to automate assignment grading, reducing manual review time ~50% while maintaining ~90%+ agreement with instructor scores across 100+ submissions per term.",
+      "Developed prompt regression and guardrail tests in Python for the grading agent, validating structured rubric outputs and blocking hallucinated feedback on edge-case submissions.",
     ],
   },
   {
@@ -75,11 +93,10 @@ export const experience = [
     period: "Mar 2022 — Aug 2024",
     yearLabel: "2022",
     highlights: [
-      "Architected distributed backend services handling thousands of requests per minute.",
-      "Reduced production latency 30–35% through schema redesign and query optimization across PostgreSQL and SQL Server.",
-      "Built event-driven pipelines with Kafka for responsiveness and fault tolerance under high load.",
-      "Owned full service lifecycle and on-call support, sustaining 99.9% uptime.",
-      "Improved CI/CD with Git and Azure DevOps, cutting deployment failures ~60%.",
+      "Developed .NET backend services and REST APIs for aircraft maintenance MRO work orders, maintenance tasks, and operational workflows used by airline maintenance teams in production.",
+      "Maintained large-scale production backend infrastructure across REST APIs, batch workers, and relational data stores, supporting 5K+ daily records across multiple enterprise customers under peak load.",
+      "Improved database performance ~30–35% on critical maintenance paths by optimizing 15+ stored procedures and SQL queries across SQL Server.",
+      "Accelerated heavy maintenance batch workloads using multithreading and parallel processing, reducing batch job runtime ~30–40% while managing throughput vs lock contention tradeoffs.",
     ],
   },
 ];
@@ -90,9 +107,9 @@ export const whatIDo = [
     description:
       "Designing and shipping scalable backend services — REST APIs, microservices, and event-driven pipelines that stay reliable under production load.",
     bullets: [
-      "FastAPI & Spring Boot service development",
-      "Kafka event streaming & async processing",
-      "Auth, rate limiting & API gateway patterns",
+      "FastAPI, Spring Boot & .NET service development",
+      "Apache Kafka event streaming & async processing",
+      "Auth, rate limiting & API design patterns",
     ],
   },
   {
@@ -100,9 +117,9 @@ export const whatIDo = [
     description:
       "Modeling data layers for performance and consistency — from schema design and indexing to caching strategies that cut latency on hot paths.",
     bullets: [
-      "PostgreSQL schema design & query optimization",
+      "PostgreSQL & SQL Server query optimization",
       "Redis caching & session management",
-      "Migrations, replication & data integrity",
+      "Alembic, Flyway migrations & data integrity",
     ],
   },
   {
@@ -110,8 +127,8 @@ export const whatIDo = [
     description:
       "End-to-end ownership from API contracts to deployed UIs — integrating React frontends with backend services and cloud infrastructure.",
     bullets: [
-      "React + TypeScript frontend integration",
-      "Docker, AWS & CI/CD deployment pipelines",
+      "React frontend integration with FastAPI APIs",
+      "Docker, AWS & GitHub Actions deployment pipelines",
       "Live demos, monitoring & production hardening",
     ],
   },
@@ -196,28 +213,26 @@ export const projects = [
     highlight: true,
     category: "AI · Full Stack",
     bullets: [
-      "Multi-tenant knowledge assistant with JWT + RBAC, org-scoped vectors, and citation-backed SSE chat.",
-      "Hybrid retrieval merges Chroma embeddings with PostgreSQL FTS via reciprocal rank fusion.",
-      "Redis exact and semantic answer caching with org-wide invalidation on document changes.",
-      "Async PDF ingestion through ARQ workers, structure-aware chunking, and GitHub Actions deploy to EC2.",
+      "Built multi-tenant knowledge assistant with JWT/RBAC, hybrid RAG retrieval (vector + Postgres FTS + RRF), and async PDF ingest via ARQ workers; deployed on AWS EC2 with Docker Compose and GitHub Actions CI/CD.",
+      "Improved grounded Q&A accuracy from 85/100 to 95/100 on a 100-question regression suite across 3 isolated orgs; verified tenant isolation with 0 cross-tenant answer leaks.",
+      "Implemented Redis exact/semantic caching for ~50 ms repeat-query responses, SSE streaming chat with inline PDF citations, and RBAC-scoped document library.",
     ],
-    tech: ["FastAPI", "PostgreSQL", "ChromaDB", "Redis", "React"],
+    tech: ["FastAPI", "PostgreSQL", "Alembic", "Redis", "ChromaDB", "React"],
     link: "https://github.com/Uday-Polineni/Multi-Tenant-Enterprise-Knowledge-Platform-RAG-",
     demoUrl: "http://ec2-3-141-104-224.us-east-2.compute.amazonaws.com/login",
     previewImage: "/projects/knowledge-assistant.png",
   },
   {
-    title: "LinkForge",
-    subtitle: "Scalable URL Shortener",
+    title: "Scalable URL Shortener",
+    subtitle: "Production URL Shortener",
     highlight: true,
     category: "Backend · Java",
     bullets: [
-      "Cache-first redirects with Redis on the hot path; PostgreSQL only on cache miss.",
-      "Per-user link ownership with session login, SHA-256 API keys, and Redis rate limiting.",
-      "Async click analytics via Redis counters and an event queue, flushed to Postgres every 30s.",
-      "Live WebSocket analytics dashboard, QR codes, and Prometheus metrics via Spring Actuator.",
+      "Built production-style URL shortener with cache-first 302 redirects, per-user link ownership, Spring Security auth, SHA-256 API keys, and Redis rate limiting; deployed on AWS EC2 with Docker Compose.",
+      "Managed PostgreSQL schema through Flyway migrations; kept redirect hot path DB-free via Redis URL cache and click counters, flushing analytics to Postgres every 30s with scheduled background jobs.",
+      "Load-tested cache-hit redirects at ~820 req/s (p95 93 ms); exposed Prometheus metrics via Spring Actuator and WebSocket-driven live analytics dashboards.",
     ],
-    tech: ["Java", "Spring Boot", "PostgreSQL", "Redis", "Flyway"],
+    tech: ["Java", "Spring Boot", "PostgreSQL", "Flyway", "Redis", "Docker"],
     link: "https://github.com/Uday-Polineni/scalable-url-shortener",
     demoUrl: "http://ec2-52-15-177-183.us-east-2.compute.amazonaws.com/login",
     previewImage: "/projects/linkforge.png",
