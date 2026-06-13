@@ -71,7 +71,7 @@ export const experience = [
     period: "Feb 2026 — Present",
     yearLabel: "NOW",
     highlights: [
-      "Architected Python FastAPI microservices adopted by 10+ engineering teams, exposing 15+ production REST APIs with modular boundaries that enabled independent cross-team releases.",
+      "Developed Python FastAPI microservices and 15+ REST APIs for workflow automation, with modular service boundaries, input validation, and centralized error handling in production.",
       "Engineered Apache Kafka event pipelines processing 10K+ activity events daily across microservices, replacing synchronous inter-service calls for asynchronous workflow automation.",
       "Operated 4+ production microservices on AWS (EC2, Aurora, RDS, S3) with GitHub Actions CI/CD, sustaining 99%+ uptime and supporting weekly production releases.",
       "Built React workflow UI modules integrated with FastAPI REST APIs, delivering production dashboards and form flows for operations teams.",
